@@ -20,9 +20,9 @@ test3_rpn = [1, 2, "+", 3, 4, "/", 5, 6, "+", "^", "*"]
 test3_ans = 0.12670540809631348
 
 # Function test.
-test4_inf = "max(2, 3)"
-test4_rpn = [2, 3, "max"]
-test4_ans = 3
+test4_inf = "max((2 + 3) / 5 * min(5, 2 + 2), 10)"
+test4_rpn = [2, 3, "+", 5, "/", 5, 2, 2, "+", "min", "*", 10, "max"]
+test4_ans = 10
 
 
 class TestParserCore(unittest.TestCase):
