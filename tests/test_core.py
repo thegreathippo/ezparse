@@ -2,7 +2,6 @@
 ## The above link provides readily available examples for use!
 from .context import ezparse
 import unittest
-import math
 
 # Simple Test.
 test1_inf = "(12 - 3 ) / 3^2 + 2 * 3"
