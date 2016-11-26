@@ -23,22 +23,22 @@ def multiply(val1, val2):
 def exponent(val1, val2):
 	return val1 ** val2
 
-def _max(*args):
-	return max(*args)
+def _max(val1, val2):
+	return max(val1, val2)
 
-def _min(*args):
-        return min(*args)
+def _min(val1, val2):
+        return min(val1, val2)
 
 Operator = collections.namedtuple("Operator", ["function", "precedence",
                                                "associativity"])
 Function = collections.namedtuple("Function", ["function"]) 
 
 operators = {
-	"+" : Operator(2, L, add),
-	"-" : Operator(2, L, subtract),
-	"/" : Operator(3, L, divide),
-	"*" : Operator(3, L, multiply),
-	"^" : Operator(4, R, exponent)
+	"+" : Operator(add, 2, L),
+	"-" : Operator(subtract, 2, L),
+	"/" : Operator(divide, 3, L),
+	"*" : Operator(multiply, 3, L),
+	"^" : Operator(exponent, 4, R)
 	}
 		
 functions = {
