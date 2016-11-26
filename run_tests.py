@@ -1,2 +1,2 @@
-from test.test_core import *
+from tests.test_core import *
 unittest.main()
